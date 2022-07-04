@@ -1,0 +1,43 @@
+
+//
+```dataview
+   table rating as "Rating", dateRated as "Date Rated"
+   from "music"
+   where type = "review"
+   sort rating desc
+```
+
+//
+---
+type: book
+copy:
+- library1
+- library2
+- personal
+---
+
+```dataview
+LIST
+FROM "books"
+WHERE contains(copy, "library2")
+```
+
+```dataview
+TABLE Recipe_Type as "Type"
+FROM "Recipes"
+SORT Recipe_Type
+```
+
+
+---
+module: Qualitative Methodology
+type: Exam
+dueDate: '2021-02-27'
+tags:
+  - #Uni/Assessment
+---
+
+TABLE module, type, dueDate
+FROM #Uni/Assessment
+Where dueDate >= date(today)
+
